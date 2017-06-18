@@ -50,7 +50,9 @@ public abstract class DbmHandler<TData> {
      */
     protected final void startRendering() {
         cancelTimer();
-        audioVisualization.startRendering();
+		if(audioVisualization!= null) {
+			audioVisualization.startRendering();
+		}
     }
 
     /**
@@ -58,7 +60,9 @@ public abstract class DbmHandler<TData> {
      */
     protected final void stopRendering() {
         cancelTimer();
-        audioVisualization.stopRendering();
+		if(audioVisualization!= null) {
+			audioVisualization.stopRendering();	
+		}
     }
 
     /**
